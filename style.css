@@ -1,0 +1,75 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  font-weight: 300;
+}
+
+h1, h2 {
+  font-weight: 300;
+}
+
+h1 {
+  margin: .5em auto .1em auto;
+}
+
+h2 {
+  margin: 0 auto 1em auto;
+}
+
+a {
+  text-decoration: none;
+  color: steelblue;
+}
+
+svg {
+  font: 18px sans-serif;
+  font-weight: 200;
+}
+
+input {
+  display: block;
+  border: none;
+  border-radius: 4px;
+  background-color: steelblue;
+  color: white;
+  font-size: 14px;
+  font-weight: 300;
+  opacity: .75;
+  padding: .5em 1em;
+  margin: 2.3em auto;
+}
+
+.line {
+  fill: none;
+  stroke: black;
+  stroke-width: 1.5px;
+}
+
+.axis line {
+  fill: none;
+  stroke: black;
+  shape-rendering: crispEdges;
+}
+
+.label {
+  font-size: 18px;
+  fill: steelblue;
+}
+
+.x text,
+.axis path {
+  display: none;
+}
+
+.maxLabel{
+  font-variant: small-caps;
+  fill: steelblue;
+}
+
+.max {
+  stroke: steelblue;
+}
+
+#tweets {
+  color: steelblue;
+}

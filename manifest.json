@@ -1,0 +1,15 @@
+{
+  "name": "Hello World!",
+  "description": "My first Chrome App.",
+  "version": "0.1",
+  "manifest_version": 2,
+  "permissions": [
+    "http://*/*"
+    ],
+  "app": {
+    "background": {
+      "scripts": ["socket.io.js", "nio.js", "background.js"]
+    }
+  },
+  "icons": { "16": "favicon-16x16.png", "48": "android-icon-48x48.png", "128": "apple-icon-120x120.png" }
+}
