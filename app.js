@@ -92,20 +92,20 @@ svg.append("text")
     .attr("class", "label");
 
 nio.source.socketio(
- "http://brand.nioinstances.com",
- ["count_by_network"],
+ "https://brand.socket.nio.works",
+ ["brand"],
  120 // optional - will immediately stream cached data within the last 120 seconds
 )
 .pipe(nio.filter(function(chunk) {
-   return chunk.type === "twitter";
+   return chunk.type === "twittercount";
 }))
 .pipe(nio.pass(function(chunk){
-  tweets.innerHTML = parseInt(chunk.count_per_sec, 10);
-  if (chunk.count_per_sec > max) {
-    max = chunk.count_per_sec;
+  tweets.innerHTML = parseInt(chunk.count, 10);
+  if (chunk.count > max) {
+    max = chunk.count;
   }
 
-  data.push(chunk.count_per_sec);
+  data.push(chunk.count);
 
   path.datum(data)
     .attr("class", "line")
@@ -163,7 +163,4 @@ nio.source.socketio(
     svg.selectAll(".x.axis")
       .call(xAxis);
   }
-
-  console.log(data);
-  console.log(max);
 }))
